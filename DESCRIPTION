@@ -1,0 +1,21 @@
+Package: RTCGA.clinical
+Type: Package
+Title: Clinical datasets from The Cancer Genome Atlas Project
+Version: 1.1.0
+Date: 2015-08-06
+Author: Marcin Kosinski <m.p.kosinski@gmail.com>
+Maintainer: Marcin Kosinski <m.p.kosinski@gmail.com>
+Description: Package provides clinical datasets from The Cancer Genome
+        Atlas Project for all cohorts types from
+        http://gdac.broadinstitute.org/. Clinical data format is
+        explained here
+        https://wiki.nci.nih.gov/display/TCGA/Clinical+Data+Overview.
+License: GPL-2
+LazyData: TRUE
+Repository: Bioconductor
+BugReports: https://github.com/mi2-warsaw/RTCGA.data/issues
+Depends: R (>= 3.2.0), RTCGA
+Suggests: knitr
+biocViews: Annotation Data
+VignetteBuilder: knitr
+NeedsCompilation: no
