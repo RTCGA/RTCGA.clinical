@@ -105,18 +105,6 @@ list.files( "data2") %>%
 
 ### Paths to clinical data
 
-Below is the code that removes unneeded "MANIFEST.txt" file from each clinical cohort folder.
-
-```{r}
-list.files( "data2") %>% 
-   file.path( "data2", .) %>%
-   sapply(function(x){
-      file.path(x, list.files(x)) %>%
-         grep(pattern = "MANIFEST.txt", x = ., value=TRUE) %>%
-         file.remove()
-      })
-```
-
 Below is the code that automatically assigns paths to files for all clinical files for all available cohorts types downloaded to `data2` folder.
 
 ```{r}
@@ -128,7 +116,7 @@ cohorts %>%
 			file.path(., list.files(.)) %>%
 			grep("clin.merged.txt", x = ., value = TRUE) %>%
 			assign(value = .,
-						 x = paste0(z, ".clin.path"),
+						 x = paste0(z, ".clinical.path"),
 						 envir = .GlobalEnv)
 	})
 ```
@@ -139,7 +127,7 @@ Because of the fact that clinical data are transposed in downloaded files, there
 
 ```{r, eval=FALSE}
 ls() %>%
-   grep("clin\\.path", x = ., value = TRUE) %>% 
+   grep("clinical\\.path", x = ., value = TRUE) %>% 
    sapply(function(element){
       tryCatch({
          readTCGA(get(element, envir = .GlobalEnv),
@@ -159,19 +147,19 @@ ls() %>%
 
 
 ```{r, eval=FALSE}
-grep( "clin", ls(), value = TRUE) %>%
+grep( "clinical", ls(), value = TRUE) %>%
    grep("path", x=., value = TRUE, invert = TRUE) %>%
    cat( sep="," ) #can one to it better? as from use_data documentation:
    # ...	Unquoted names of existing objects to save
-   devtools::use_data(ACC.clin,BLCA.clin,BRCA.clin,CESC.clin,
-   									 CHOL.clin,COAD.clin,COADREAD.clin,DLBC.clin,
-   									 ESCA.clin,FPPP.clin,GBM.clin,GBMLGG.clin,
-   									 HNSC.clin,KICH.clin,KIPAN.clin,KIRC.clin,
-   									 KIRP.clin,LAML.clin,LGG.clin,LIHC.clin,
-   									 LUAD.clin,LUSC.clin,MESO.clin,OV.clin,
-   									 PAAD.clin,PCPG.clin,PRAD.clin,READ.clin,
-   									 SARC.clin,SKCM.clin,STAD.clin,STES.clin,
-   									 TGCT.clin,THCA.clin,THYM.clin,UCEC.clin,
-   									 UCS.clin,UVM.clin,
+   devtools::use_data(ACC.clinical,BLCA.clinical,BRCA.clinical,
+   									 CESC.clinical,CHOL.clinical,COAD.clinical,
+   									 COADREAD.clinical,DLBC.clinical,ESCA.clinical,
+   									 FPPP.clinical,GBM.clinical,GBMLGG.clinical,
+   									 HNSC.clinical,KICH.clinical,KIPAN.clinical,
+   									 KIRC.clinical,KIRP.clinical,LAML.clinical,
+   									 LGG.clinical,LIHC.clinical,LUAD.clinical,
+   									 LUSC.clinical,MESO.clinical,OV.clinical,
+   									 PAAD.clinical,PCPG.clinical,PRAD.clinical,
+   									 READ.clinical,SARC.clinical,SKCM.clinical,STAD.clinical,STES.clinical,TGCT.clinical,THCA.clinical,THYM.clinical,UCEC.clinical,UCS.clinical,UVM.clinical,
                       compress="xz")
 ```
