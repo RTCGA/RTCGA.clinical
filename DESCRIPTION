@@ -1,7 +1,7 @@
 Package: RTCGA.clinical
 Type: Package
 Title: Clinical datasets from The Cancer Genome Atlas Project
-Version: 20150821.1.1
+Version: 20150821.1.2
 Date: 2015-11-11
 Author: Marcin Kosinski <m.p.kosinski@gmail.com>
 Maintainer: Marcin Kosinski <m.p.kosinski@gmail.com>

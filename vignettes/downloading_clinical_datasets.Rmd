@@ -160,6 +160,9 @@ grep( "clinical", ls(), value = TRUE) %>%
    									 LGG.clinical,LIHC.clinical,LUAD.clinical,
    									 LUSC.clinical,MESO.clinical,OV.clinical,
    									 PAAD.clinical,PCPG.clinical,PRAD.clinical,
-   									 READ.clinical,SARC.clinical,SKCM.clinical,STAD.clinical,STES.clinical,TGCT.clinical,THCA.clinical,THYM.clinical,UCEC.clinical,UCS.clinical,UVM.clinical,
+   									 READ.clinical,SARC.clinical,SKCM.clinical,
+   									 STAD.clinical,STES.clinical,TGCT.clinical,
+   									 THCA.clinical,THYM.clinical,UCEC.clinical,
+   									 UCS.clinical,UVM.clinical,
                       compress="xz")
 ```
