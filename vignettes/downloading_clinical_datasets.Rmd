@@ -1,6 +1,6 @@
 ---
 title: "Using `RTCGA` package to download clinical data that are included in `RTCGA.clinical` package"
-subtitle: "Date of datasets release: 2015-08-21"
+subtitle: "Date of datasets release: 2015-11-01"
 author: "Marcin Kosinski"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
@@ -50,7 +50,7 @@ library(RTCGA)
 checkTCGA('Dates')
 ```
 
-Version 20150821.1.0 of `RTCGA.clinical` package contains clinical datasets which were released `2015-08-21`. They were downloaded in the following way (which is mainly copied from [http://marcinkosinski.github.io/RTCGA/](http://marcinkosinski.github.io/RTCGA/):
+Version 20151101.0.0 of `RTCGA.clinical` package contains clinical datasets which were released `2015-11-01`. They were downloaded in the following way (which is mainly copied from [http://rtcga.github.io/RTCGA/](http://rtcga.github.io/RTCGA/):
 
 ## Available cohorts
 
@@ -66,14 +66,14 @@ For all cohorts the following code downloads the RPPA data.
 ## Downloading clinical files
 ```{r, eval=FALSE}
 # dir.create( "data2" ) # name of a directory in which data will be stored
-releaseDate <- "2015-08-21"
+releaseDate <- "2015-11-01"
 sapply( cohorts, function(element){
 tryCatch({
 downloadTCGA( cancerTypes = element, 
               destDir = "data2", 
               date = releaseDate )},
 error = function(cond){
-   cat("Error: Maybe there weren't mutations data for ", element, " cancer.\n")
+   cat("Error: Maybe there weren't clinical data for ", element, " cancer.\n")
 }
 )
 })

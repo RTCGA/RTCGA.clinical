@@ -2,7 +2,7 @@
 #' Clinical datasets from TCGA project
 #'
 #' Package provides clinical datasets from The Cancer Genome Atlas Project for all cohorts types from \url{http://gdac.broadinstitute.org/}.
-#' Data were downloaded using \link{RTCGA-package} and contain snapshots for the date: \code{2015-08-21}. The process is described here: \url{http://mi2-warsaw.github.io/RTCGA.data/}.
+#' Data were downloaded using \link{RTCGA-package} and contain snapshots for the date: \code{2015-11-01}. The process is described here: \url{http://mi2-warsaw.github.io/RTCGA.data/}.
 #' Use cases, examples and information about datasets in \pkg{RTCGA.data} family can be found here: \code{browseVignettes("RTCGA")}. Clinical data format is explained here \url{https://wiki.nci.nih.gov/display/TCGA/Clinical+Data+Overview}.
 #' 
 #' @details \code{browseVignettes("RTCGA")}
@@ -22,7 +22,7 @@
 #' 
 #' @name clinical
 #' @rdname clinical
-#' @aliases ACC.clinical,BLCA.clinical,BRCA.clinical,CESC.clinical,CHOL.clinical,COAD.clinical,COADREAD.clinical,DLBC.clinical,ESCA.clinical,FPPP.clinical,GBM.clinical,GBMLGG.clinical,HNSC.clinical,KICH.clinical,KIPAN.clinical,KIRC.clinical,KIRP.clinical,LAML.clinical,LGG.clinical,LIHC.clinical,LUAD.clinical,LUSC.clinical,MESO.clinical,OV.clinical,PAAD.clinical,PCPG.clinical,READ.clinical,SKCM.clinical,STAD.clinical,STES.clinical,TGCT.clinical,THCA.clinical,THYM.clinical,UCEC.clinical,UCS.clinical,UVM.clinical
+#' @aliases ACC.clinical,BLCA.clinical,BRCA.clinical,CESC.clinical,CHOL.clinical,COAD.clinical,COADREAD.clinical,DLBC.clinical,ESCA.clinical,FPPP.clinical,GBM.clinical,GBMLGG.clinical,HNSC.clinical,KICH.clinical,KIPAN.clinical,KIRC.clinical,KIRP.clinical,LAML.clinical,LGG.clinical,LIHC.clinical,LUAD.clinical,LUSC.clinical,MESO.clinical,OV.clinical,PAAD.clinical,PCPG.clinical,PRAD.clinical,READ.clinical,SARC.clinical,SKCM.clinical,STAD.clinical,STES.clinical,TGCT.clinical,THCA.clinical,THYM.clinical,UCEC.clinical,UCS.clinical,UVM.clinical
 #'
 "ACC.clinical"
 #' @name clinical
@@ -154,7 +154,17 @@
 #' @rdname clinical
 #' @format NULL
 #' 
+"PRAD.clinical"
+#' @name clinical
+#' @rdname clinical
+#' @format NULL
+#' 
 "READ.clinical"
+#' @name clinical
+#' @rdname clinical
+#' @format NULL
+#' 
+"SARC.clinical"
 #' @name clinical
 #' @rdname clinical
 #' @format NULL
