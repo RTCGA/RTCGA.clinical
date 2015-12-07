@@ -3,7 +3,7 @@
 \docType{data}
 \name{clinical}
 \alias{ACC.clinical}
-\alias{ACC.clinical,BLCA.clinical,BRCA.clinical,CESC.clinical,CHOL.clinical,COAD.clinical,COADREAD.clinical,DLBC.clinical,ESCA.clinical,FPPP.clinical,GBM.clinical,GBMLGG.clinical,HNSC.clinical,KICH.clinical,KIPAN.clinical,KIRC.clinical,KIRP.clinical,LAML.clinical,LGG.clinical,LIHC.clinical,LUAD.clinical,LUSC.clinical,MESO.clinical,OV.clinical,PAAD.clinical,PCPG.clinical,READ.clinical,SKCM.clinical,STAD.clinical,STES.clinical,TGCT.clinical,THCA.clinical,THYM.clinical,UCEC.clinical,UCS.clinical,UVM.clinical}
+\alias{ACC.clinical,BLCA.clinical,BRCA.clinical,CESC.clinical,CHOL.clinical,COAD.clinical,COADREAD.clinical,DLBC.clinical,ESCA.clinical,FPPP.clinical,GBM.clinical,GBMLGG.clinical,HNSC.clinical,KICH.clinical,KIPAN.clinical,KIRC.clinical,KIRP.clinical,LAML.clinical,LGG.clinical,LIHC.clinical,LUAD.clinical,LUSC.clinical,MESO.clinical,OV.clinical,PAAD.clinical,PCPG.clinical,PRAD.clinical,READ.clinical,SARC.clinical,SKCM.clinical,STAD.clinical,STES.clinical,TGCT.clinical,THCA.clinical,THYM.clinical,UCEC.clinical,UCS.clinical,UVM.clinical}
 \alias{BLCA.clinical}
 \alias{BRCA.clinical}
 \alias{CESC.clinical}
@@ -29,7 +29,9 @@
 \alias{OV.clinical}
 \alias{PAAD.clinical}
 \alias{PCPG.clinical}
+\alias{PRAD.clinical}
 \alias{READ.clinical}
+\alias{SARC.clinical}
 \alias{SKCM.clinical}
 \alias{STAD.clinical}
 \alias{STES.clinical}
@@ -97,7 +99,11 @@ PAAD.clinical
 
 PCPG.clinical
 
+PRAD.clinical
+
 READ.clinical
+
+SARC.clinical
 
 SKCM.clinical
 
