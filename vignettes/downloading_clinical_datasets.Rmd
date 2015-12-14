@@ -50,7 +50,7 @@ library(RTCGA)
 checkTCGA('Dates')
 ```
 
-Version 20151101.0.0 of `RTCGA.clinical` package contains clinical datasets which were released `2015-11-01`. They were downloaded in the following way (which is mainly copied from [http://rtcga.github.io/RTCGA/](http://rtcga.github.io/RTCGA/):
+Version 20151101.*.* of `RTCGA.clinical` package contains clinical datasets which were released `2015-11-01`. They were downloaded in the following way (which is mainly copied from [http://rtcga.github.io/RTCGA/](http://rtcga.github.io/RTCGA/):
 
 ## Available cohorts
 
@@ -131,8 +131,15 @@ ls() %>%
    sapply(function(element){
       tryCatch({
          readTCGA(get(element, envir = .GlobalEnv),
-               dataType = "clinical") %>%
-         assign(value = .,
+               dataType = "clinical") -> clinical_file
+         	
+		     ## remove non-ASCII strings:
+		     for( i in 1:ncol(clinical_file)){
+		       clinical_file[, i] <- iconv(clinical_file[, i],
+		                                    "UTF-8", "ASCII", sub="")
+		     } 
+         	
+         assign(value = clinical_file,
                 x = sub("\\.path", "", x = element),
                 envir = .GlobalEnv )
       }, error = function(cond){
