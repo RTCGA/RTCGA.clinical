@@ -5,11 +5,8 @@ A part of [RTCGA](https://github.com/RTCGA) family.
 To install development version from GitHub use
 
 ````{R}
-if (!require(devtools)) {
-    install.packages("devtools")
-    require(devtools)
-}
-install_github("RTCGA/RTCGA.clinical", build.vignettes = TRUE)
+library(RTCGA)
+installTCGA("RTCGA.clinical")
 ````
 
 Make sure you have [Rtools](https://cran.r-project.org/bin/windows/Rtools/) installed on your computer, if you are trying `devtools` on Windows.
